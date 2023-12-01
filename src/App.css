@@ -1,38 +1,227 @@
-.App {
-  text-align: center;
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.main-container{
+  padding: 10px;
   display: flex;
+  height: 100vh;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  gap: 20px;
+}
+
+.search-input{
+  width: 50%;
+  height: 45px;
+  margin-top: 20px;
+  padding-left: 15px;
+  border-radius: 25px;
+  font-size: 20px;
+  font-weight: 600;
+}
+.bin{
+  position: absolute;
+  right: 100px;
+  top: 30px;
+  width: 120px;
+  height: 45px;
+  font-size: 18px;
+  font-weight: 600;
+  border-radius: 23px;
+  border: none;
+  background-color: rgb(203, 35, 35);
   color: white;
 }
-
-.App-link {
-  color: #61dafb;
+.bin:hover{
+  background-color: red;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.bin:active{
+  transform: scale(1.1);
+}
+.main-table{
+  width: 95%;
+  height: fit-content;
+  padding: 5px 15px;
+  text-align: center;
+}
+table,th,td {
+  padding: 3px 6px;
+  border: 1px solid black;
+  border-collapse: collapse;
+      }
+.table-row{
+  font-size:20px
+}
+.table-body{
+  font-size: 20px;
+  font-weight: 500;
+}
+.update-buttons{
+  display: flex;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+.btn{
+  padding: 5px 10px;
+  width: 40%;
+  height: 35px;
+  font-size: 16px;
+  border-radius: 17px;
+  border: 0.1px solid gray;
+}
+.edit:hover{
+background-color: rgb(79, 72, 72);
+color: white;
+border: none;
+}
+.delete:hover{
+  background-color: red;
+  color: white;
+  border: none;
+}
+.edit-options{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40%;
+  height: 35px;
+  gap: 20px;
+}
+.cancel{
+  width: 30px;
+  mix-blend-mode: darken;
+  border-radius: 50%;
+  /* padding: 2px; */
+}
+.cancel:hover{
+  border: 1px solid black;
+}
+.save:hover{
+  border: 1px solid black;
+}
+.save{
+  width: 30px;
+  mix-blend-mode: darken;
+  border-radius: 50%;
+  padding: 2px;
+}
+.userdata-input{
+  width: 80%;
+  height: 40px;
+  border-radius: 20px;
+  font-size: 20px;
+  padding-left: 15px;
+  outline: 0.1px solid gray;
+  border: none;
+}
+.select-all{
+  width: 100px;
+  height: 30px;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 8px;
+  border: 1px solid gray;
+}
+.select-all:hover{
+  background-color: black;
+  color: white;
+  border: none;
+}
+.pagination{
+  display: flex;
+  gap:50px;
+  position: absolute;
+  bottom: 40px;
+}
+.first-btn, .last-btn{
+  height: 40px;
+  width: 150px;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 20px;
+  border:none;
+  box-shadow: 3px 3px 15px rgb(11, 9, 9);
+}
+.pagination span{
+  border: 1px solid black;
+  padding: 10px 15px 5px 15px;
+  border-radius: 50%;
+  font-size: 20px;
+  font-weight: 600;
+}
+.first-btn:hover{
+  background-color: rgb(49, 45, 45);
+   color: white;
+   box-shadow: 3px 3px 15px rgb(239, 146, 146);
+}
+.next-btn:enabled:hover{
+  background-color: rgb(49, 45, 45);
+   color: white;
+   box-shadow: 3px 3px 15px rgb(239, 146, 146);
+}
+.last-btn:hover{
+  background-color: rgb(49, 45, 45);
+   color: white;
+   box-shadow: 3px 3px 15px rgb(239, 146, 146);
+}
+.previous-btn:enabled:hover{
+  background-color: rgb(49, 45, 45);
+   color: white;
+   box-shadow: 3px 3px 15px rgb(239, 146, 146);
+}
+.previous-btn:disabled{
+  height: 40px;
+  width: 150px;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 20px;
+}
+.next-btn:disabled{
+  height: 40px;
+  width: 150px;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 20px;
+}
+.next-btn:enabled{
+  height: 40px;
+  width: 150px;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 20px;
+  border:none;
+  box-shadow: 3px 3px 15px rgb(11, 9, 9);
+}
+.previous-btn:enabled{
+  height: 40px;
+  width: 150px;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 20px;
+  border:none;
+  box-shadow: 3px 3px 15px rgb(11, 9, 9);
+}
+.delete-all:disabled{
+  height: 40px;
+  width: 400px;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 20px;
+}
+.delete-all:enabled{
+  height: 40px;
+  width: 400px;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 20px;
+  background-color: rgb(195, 35, 35);
+  color: white;
+  border: none;
+}
+.delete-all:enabled:active{
+  transform: scale(1.1);
 }
